@@ -14,6 +14,7 @@ def create_app():
     db.init_app(app)
     """初始化迁移对象"""
     migrate = Migrate(app, db)
-
-
+    """注册模型"""
+    from app.blog import models
+    from app.admin import models
     return app
