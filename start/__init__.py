@@ -17,4 +17,6 @@ def create_app():
     """注册模型"""
     from app.blog import models
     from app.admin import models
+    from app.blog import views
+    app.add_url_rule(rule='/', view_func=views.index, endpoint='index')
     return app

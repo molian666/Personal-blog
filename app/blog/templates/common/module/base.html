@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="{{ url_for('blog.static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('blog.static', filename='layui/css/layui.css') }}">
+    <script src="{{ url_for('blog.static', filename='layui/layui.js') }}"></script>
+</head>
+<body>
+    {% block body %}
+        {% block header %}
+            <header class="header">
+                <div class="layui-container">
+                    <a href="/">
+                        <img src="{{ url_for('blog.static', filename='imgs/logo.jpg') }} " class="logopic">
+                    </a>
+                    <a href="/"><h1 class="title">汪Sir小站</h1></a>
+                    <span>天青色等烟雨，而我在等你  ( •̀ ω •́ )</span>
+                    <div class="layui-nav layui-layout-right">
+                        <li class="layui-nav-item"><a>首页</a></li>
+                        <li class="layui-nav-item"><a>归档</a></li>
+                        <li class="layui-nav-item"><a>笔记</a></li>
+                        <li class="layui-nav-item"><a>留言</a></li>
+                        <li class="layui-nav-item"><a>关于</a></li>
+                    </div>
+                </div>
+            </header>
+        {% endblock %}
+        {% block content %}
+            <div class="layui-container">
+                <div class="layui-row layui-col-space30">
+                    <div class="layui-col-md9">
+                        <div class="post-card">
+                            <div class="card">
+                                <h1>用初中数学理解LLM工作原理</h1>
+                                <p>首先，需要注意的是，神经网络只能接受数字作为输入，并只能输出数字，毫无例外。关键在于如何将输入以数字的形式表示，并以实现目标所需的方式解释输出的数字。
+
+然后，构建神经网络，使其能够接收你提供的输入并给出你想要的输出（基于你选择的输出解释）。让我们看看如何从加法和乘法走向像Llama 3.1(https://ai.meta.com/blog/meta-llama-3-1/)这样的模型。
+                                现在，我们构建一个神经网络来进行分类。我们需要确定输入和输出的物理意义。我们的输入已经是数字，因此可以直接输入到网络中。我们的输出是两个物体，叶子和花，神经网络无法直接输出。我们可以考虑几种方案：
+
+
+我们可以让网络输出一个数字。如果这个数字是正数，我们就说它是叶子；如果是负数，我们就说它是花。
+
+或者，我们可以让网络输出两个数字。我们将第一个数字解释为叶子的数字，第二个数字解释为花的数字，然后选择较大数字对应的物体作为分类结果。
+
+这两种方案都允许网络输出数字，我们可以将其解释为叶子或花。我们在这里选择第二种方案，因为它在我们后面要看的其他任务中也适用。以下是使用该方案进行分类的神经网络。我们来分析一下：</p>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-friends"></i>
+                                    <span>汪Sir</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-read"></i>
+                                    <span>默认分类</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-time"></i>
+                                    <span>2024-07-30</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon">&#xe62c;</i>
+                                    <span>5345</span>
+                                </span>
+                                <span class="card-common">阅读全文</span>
+                            </div>
+                            <div class="card">
+                                <h1>用初中数学理解LLM工作原理</h1>
+                                <p>首先，需要注意的是，神经网络只能接受数字作为输入，并只能输出数字，毫无例外。关键在于如何将输入以数字的形式表示，并以实现目标所需的方式解释输出的数字。
+
+然后，构建神经网络，使其能够接收你提供的输入并给出你想要的输出（基于你选择的输出解释）。让我们看看如何从加法和乘法走向像Llama 3.1(https://ai.meta.com/blog/meta-llama-3-1/)这样的模型。
+                                现在，我们构建一个神经网络来进行分类。我们需要确定输入和输出的物理意义。我们的输入已经是数字，因此可以直接输入到网络中。我们的输出是两个物体，叶子和花，神经网络无法直接输出。我们可以考虑几种方案：
+
+
+我们可以让网络输出一个数字。如果这个数字是正数，我们就说它是叶子；如果是负数，我们就说它是花。
+
+或者，我们可以让网络输出两个数字。我们将第一个数字解释为叶子的数字，第二个数字解释为花的数字，然后选择较大数字对应的物体作为分类结果。
+
+这两种方案都允许网络输出数字，我们可以将其解释为叶子或花。我们在这里选择第二种方案，因为它在我们后面要看的其他任务中也适用。以下是使用该方案进行分类的神经网络。我们来分析一下：</p>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-friends"></i>
+                                    <span>汪Sir</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-read"></i>
+                                    <span>默认分类</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-time"></i>
+                                    <span>2024-07-30</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon">&#xe62c;</i>
+                                    <span>5345</span>
+                                </span>
+                                <span class="card-common">阅读全文</span>
+                            </div>
+                            <div class="card">
+                                <h1>用初中数学理解LLM工作原理</h1>
+                                <p>首先，需要注意的是，神经网络只能接受数字作为输入，并只能输出数字，毫无例外。关键在于如何将输入以数字的形式表示，并以实现目标所需的方式解释输出的数字。
+
+然后，构建神经网络，使其能够接收你提供的输入并给出你想要的输出（基于你选择的输出解释）。让我们看看如何从加法和乘法走向像Llama 3.1(https://ai.meta.com/blog/meta-llama-3-1/)这样的模型。
+                                现在，我们构建一个神经网络来进行分类。我们需要确定输入和输出的物理意义。我们的输入已经是数字，因此可以直接输入到网络中。我们的输出是两个物体，叶子和花，神经网络无法直接输出。我们可以考虑几种方案：
+
+
+我们可以让网络输出一个数字。如果这个数字是正数，我们就说它是叶子；如果是负数，我们就说它是花。
+
+或者，我们可以让网络输出两个数字。我们将第一个数字解释为叶子的数字，第二个数字解释为花的数字，然后选择较大数字对应的物体作为分类结果。
+
+这两种方案都允许网络输出数字，我们可以将其解释为叶子或花。我们在这里选择第二种方案，因为它在我们后面要看的其他任务中也适用。以下是使用该方案进行分类的神经网络。我们来分析一下：</p>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-friends"></i>
+                                    <span>汪Sir</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-read"></i>
+                                    <span>默认分类</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-time"></i>
+                                    <span>2024-07-30</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon">&#xe62c;</i>
+                                    <span>5345</span>
+                                </span>
+                                <span class="card-common">阅读全文</span>
+                            </div>
+                            <div class="card">
+                                <h1>用初中数学理解LLM工作原理</h1>
+                                <p>首先，需要注意的是，神经网络只能接受数字作为输入，并只能输出数字，毫无例外。关键在于如何将输入以数字的形式表示，并以实现目标所需的方式解释输出的数字。
+
+然后，构建神经网络，使其能够接收你提供的输入并给出你想要的输出（基于你选择的输出解释）。让我们看看如何从加法和乘法走向像Llama 3.1(https://ai.meta.com/blog/meta-llama-3-1/)这样的模型。
+                                现在，我们构建一个神经网络来进行分类。我们需要确定输入和输出的物理意义。我们的输入已经是数字，因此可以直接输入到网络中。我们的输出是两个物体，叶子和花，神经网络无法直接输出。我们可以考虑几种方案：
+
+
+我们可以让网络输出一个数字。如果这个数字是正数，我们就说它是叶子；如果是负数，我们就说它是花。
+
+或者，我们可以让网络输出两个数字。我们将第一个数字解释为叶子的数字，第二个数字解释为花的数字，然后选择较大数字对应的物体作为分类结果。
+
+这两种方案都允许网络输出数字，我们可以将其解释为叶子或花。我们在这里选择第二种方案，因为它在我们后面要看的其他任务中也适用。以下是使用该方案进行分类的神经网络。我们来分析一下：</p>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-friends"></i>
+                                    <span>汪Sir</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-read"></i>
+                                    <span>默认分类</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon layui-icon-time"></i>
+                                    <span>2024-07-30</span>
+                                </span>
+                                <span class="card-common">
+                                    <i class="layui-icon">&#xe62c;</i>
+                                    <span>5345</span>
+                                </span>
+                                <span class="card-common">阅读全文</span>
+                            </div>
+                        </div>
+                    </div>
+                        <!--  侧边栏 -->
+                    <div class="layui-col-md3">
+                        {% include 'common/module/search.html' %}
+                        {% include 'common/module/my_info.html' %}
+                        {% include 'common/module/category.html' %}
+                        {% include 'common/module/recent_posts.html' %}
+                        {% include 'common/module/tags.html' %}
+                    </div>
+                </div>
+            </div>
+        {% endblock %}
+        {% block footer %}
+            <footer class="footer">
+                <span class="footer-span">Copyright © 2024 Wang Sir</span>
+            </footer>
+        {% endblock %}
+    {% endblock %}
+</body>
+</html>
+<script type="text/javascript" src="{{ url_for('blog.static'
+    , filename='js/特效.js') }}" color="0,255,255"></script>

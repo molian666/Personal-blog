@@ -8,17 +8,9 @@ bp_blog = Blueprint('blog', __name__, url_prefix='/blog', static_folder='static'
 
 @bp_blog.route('/index')
 def index():
-    post = Post.query.get(1)
-    title = post.title
-    content = post.content
     return render_template('index.html', **locals())
 
 
-
-
-
-
-
-
-
-
+@bp_blog.route('/Email')
+def email():
+    return 'molian6666@gmail.com'
